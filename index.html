@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSDRP Green Energy Bio Refineries | Clean, Sustainable Bio-CNG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#4ade80',
+                            DEFAULT: '#16a34a',
+                            dark: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Single Page view state engine styling */
+        .page-view { display: none !important; }
+        .page-view.active { display: block !important; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
+
+    <div class="bg-brand-dark text-emerald-100 text-xs py-2.5 px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center gap-2 border-b border-emerald-800/50">
+        <div class="flex items-center space-x-4">
+            <span class="flex items-center gap-1">📍 Plant Site: Village Godehalu, Ballari, Karnataka — 583111</span>
+            <span class="hidden sm:inline text-emerald-400">|</span>
+            <span class="flex items-center gap-1">🌱 GOBARdhan Verified & SATAT Compliant</span>
+        </div>
+        <div class="font-medium text-emerald-300 hidden md:block">Empowering India's Green Energy Ecosystem</div>
+    </div>
+
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center relative">
+            
+            <div class="flex flex-col cursor-pointer" onclick="switchPage('home')">
+                <span class="font-black text-lg tracking-tight text-brand-dark sm:text-2xl">VSDRP GREEN ENERGY</span>
+                <span class="text-[10px] sm:text-xs font-bold tracking-wider text-brand uppercase -mt-1">Bio Refineries Pvt. Ltd.</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8 font-medium text-sm text-slate-600">
+                <button onclick="switchPage('home')" id="nav-home" class="nav-btn text-brand border-b-2 border-brand pb-1 focus:outline-none font-semibold">Home</button>
+                <button onclick="switchPage('about')" id="nav-about" class="nav-btn hover:text-brand transition focus:outline-none">About Us</button>
+                <button onclick="switchPage('technology')" id="nav-technology" class="nav-btn hover:text-brand transition focus:outline-none">Technology</button>
+                <button onclick="switchPage('feedstock')" id="nav-feedstock" class="nav-btn hover:text-brand transition focus:outline-none">Feedstock Partnership</button>
+                <button onclick="switchPage('directors')" id="nav-directors" class="nav-btn hover:text-brand transition focus:outline-none">Board of Directors</button>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <button onclick="switchPage('contact')" id="nav-contact" class="nav-btn-cta bg-brand hover:bg-brand-dark text-white font-semibold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-lg shadow-sm transition inline-block">Partner With Us</button>
+                
+                <button onclick="toggleMobileMenu()" id="mobileMenuBtn" class="md:hidden flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-3 py-2.5 rounded-lg text-sm transition focus:outline-none">
+                    ☰ <span class="ml-1 text-xs uppercase tracking-wider">Menu</span>
+                </button>
+            </div>
+
+            <div id="mobileDropdown" class="hidden absolute top-20 left-0 w-full bg-white shadow-lg border-b border-slate-200 z-50 flex flex-col py-3 px-4 space-y-2 md:hidden">
+                <button onclick="switchPage('home'); toggleMobileMenu();" class="mobile-nav-btn text-left font-semibold text-brand py-2.5 px-3 rounded-lg bg-emerald-50/50 w-full">Home</button>
+                <button onclick="switchPage('about'); toggleMobileMenu();" class="mobile-nav-btn text-left font-medium text-slate-600 hover:text-brand py-2.5 px-3 rounded-lg w-full">About Us</button>
+                <button onclick="switchPage('technology'); toggleMobileMenu();" class="mobile-nav-btn text-left font-medium text-slate-600 hover:text-brand py-2.5 px-3 rounded-lg w-full">Technology</button>
+                <button onclick="switchPage('feedstock'); toggleMobileMenu();" class="mobile-nav-btn text-left font-medium text-slate-600 hover:text-brand py-2.5 px-3 rounded-lg w-full">Feedstock Partnership</button>
+                <button onclick="switchPage('directors'); toggleMobileMenu();" class="mobile-nav-btn text-left font-medium text-slate-600 hover:text-brand py-2.5 px-3 rounded-lg w-full">Board of Directors</button>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <div id="page-home" class="page-view active">
+            <section class="relative bg-gradient-to-br from-brand-dark to-emerald-900 text-white overflow-hidden py-20 sm:py-32">
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="max-w-3xl">
+                        <span class="bg-emerald-800/60 text-brand-light text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider inline-block mb-6 border border-emerald-700">The Future of Bio-Energy</span>
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                            Powering Tomorrow with Clean, Sustainable <span class="text-brand-light">Bio-CNG</span>
+                        </h1>
+                        <p class="text-base sm:text-lg text-emerald-100/90 mb-8 max-w-2xl leading-relaxed">
+                            Transforming localized biomass and dedicated energy crops into high-purity Compressed Biogas ($CH_4$) and nutrient-dense organic fertilizers to build a circular rural economy.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="switchPage('about')" class="bg-brand hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition text-center w-full sm:w-auto text-sm">Learn More About Us</button>
+                            <button onclick="switchPage('contact')" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-semibold px-6 py-3 rounded-lg transition text-center w-full sm:w-auto text-sm">Initialize Partnership</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Our Core Industrial Pillars</h2>
+                        <p class="text-slate-600 mt-2 text-xs sm:text-sm">Engineered to drive national renewable mandates while generating robust commercial and rural impact.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-brand font-bold text-xl mb-5">⚡</div>
+                            <h3 class="text-lg font-bold mb-2 text-slate-900">Energy Security</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Displacing conventional commercial fossil fuels with completely carbon-neutral automotive and industrial grade Compressed Biogas.</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-brand font-bold text-xl mb-5">🚜</div>
+                            <h3 class="text-lg font-bold mb-2 text-slate-900">Rural Prosperity</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Securing agricultural supply lines via direct long-term buyback contracts of energy crops, stabilizing native farming incomes.</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-brand font-bold text-xl mb-5">🔄</div>
+                            <h3 class="text-lg font-bold mb-2 text-slate-900">Circular Economy</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Repurposing processed liquid and solid digestates into pathogen-free organic manure, replenishing the carbon soil metrics.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="page-about" class="page-view">
+            <section class="py-16 bg-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <span class="text-brand font-bold text-xs uppercase tracking-wider bg-emerald-50 px-3 py-1.5 rounded-full">Corporate Profile</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">About VSDRP Green Energy</h2>
+                        <p class="text-slate-600 mt-3 text-sm sm:text-base leading-relaxed">
+                            VSDRP Green Energy Bio Refineries Pvt. Ltd. is a specialized renewable fuel enterprise engineered to build, own, and scale clean bio-energy solutions. Strategically situated in Ballari, Karnataka, our flagship bio-refinery handles a core manufacturing output capacity of <strong>12 Tonnes Per Day (TPD)</strong> of high-purity Compressed Biogas (CBG).
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                        <div class="bg-slate-50 border border-slate-100 p-6 rounded-2xl shadow-sm">
+                            <div class="text-xl mb-2">🎯</div>
+                            <h3 class="text-lg font-bold text-slate-950 mb-1">Our Mission</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">To reliably generate high-purity Compressed Biogas and premium fermented organic fertilizers by deploying advanced multi-stage processing technology, securing tight regional agri-linkages, and maintaining complete compliance with statutory environmental boards.</p>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-100 p-6 rounded-2xl shadow-sm">
+                            <div class="text-xl mb-2">👁️</div>
+                            <h3 class="text-lg font-bold text-slate-950 mb-1">Our Vision</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">To serve as a premier commercial catalyst in India's transition toward absolute fossil fuel independence, developing an integrated ecosystem where modern industrial energy needs and agrarian wealth generation thrive in balance.</p>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-100 p-6 rounded-2xl shadow-sm">
+                            <div class="text-xl mb-2">📈</div>
+                            <h3 class="text-lg font-bold text-slate-950 mb-1">Our Corporate Goal</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">To achieve complete runtime infrastructure synchronization at our Ballari unit, establishing a high-performance commercial blueprint for automated biomethanation plants that can be successfully replicated across the state.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 mb-16 shadow-xl">
+                        <div class="max-w-3xl">
+                            <h3 class="text-brand-light text-xs font-bold uppercase tracking-widest mb-1">Understanding Compressed Biogas (CBG)</h3>
+                            <h4 class="text-xl sm:text-3xl font-extrabold mb-4 sm:mb-6 tracking-tight">An Advanced Drop-In Replacement for Natural Gas</h4>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+                                CBG is a highly purified, methane-rich biofuel produced through the anaerobic digestion of organic materials, including agricultural residues and cattle waste. By stripping out trace carbon dioxide ($CO_2$) and hydrogen sulfide ($H_2S$), the gas is enriched to match properties equal to fossil-derived natural gas, containing <strong>over 98% methane purity</strong>.
+                            </p>
+                            
+                            <div class="border-t border-slate-800 pt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <h5 class="text-emerald-400 text-xs sm:text-sm font-bold uppercase tracking-wider mb-1">Automotive Fueling Integration</h5>
+                                    <p class="text-[11px] sm:text-xs text-slate-400 leading-relaxed">Acts as a direct drop-in replacement for conventional CNG, refueling over 32 lakh gas-based commercial and private vehicles via standard Oil Marketing Company (OMC) retail networks.</p>
+                                </div>
+                                <div>
+                                    <h5 class="text-emerald-400 text-xs sm:text-sm font-bold uppercase tracking-wider mb-1">Industrial & Commercial Utility</h5>
+                                    <p class="text-[11px] sm:text-xs text-slate-400 leading-relaxed">Optimally suited for direct deployment within industrial combustion boilers, large-scale commercial cooking setups, and decentralized clean electricity generation modules.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16">
+                        <div>
+                            <span class="text-brand font-bold text-xs uppercase tracking-wider">Macro-Economic Imperative</span>
+                            <h3 class="text-2xl font-extrabold text-slate-900 tracking-tight mt-1 mb-4">National Security & Import Mitigation</h3>
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-4 text-xs font-medium text-slate-700 leading-relaxed">
+                                🏢 <strong>Official Plant Site Registry:</strong><br>
+                                Village Godehalu, GP Amarapura,<br>
+                                Block Ballari, District Ballari, State Karnataka, Pincode 583111.
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                                India currently relies on foreign imports to fulfill nearly 50% of its native natural gas consumption, along with a steep crude oil dependence. Under the apex **SATAT** initiative, decentralized CBG refinement directly targets raising natural gas shares to 15% within the national energy mix.
+                            </p>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Nationally, the sector safely processes over <strong>62 MMT of annual organic waste</strong>, converting it into value-added energy assets while building a massive domestic supply chain grid. This safeguards central financial flows and buffers national networks from international energy market shocks.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-slate-50 border border-slate-200/60 p-4 sm:p-6 rounded-2xl">
+                                <div class="text-brand font-black text-xl sm:text-2xl">~50%</div>
+                                <h4 class="text-[10px] font-bold uppercase text-slate-700 tracking-wider mt-1 mb-1">Import Focus</h4>
+                                <p class="text-[11px] text-slate-500 leading-relaxed">Displacing high-cost foreign gas procurement.</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200/60 p-4 sm:p-6 rounded-2xl">
+                                <div class="text-brand font-black text-xl sm:text-2xl">370 MMT</div>
+                                <h4 class="text-[10px] font-bold uppercase text-slate-700 tracking-wider mt-1 mb-1">Manure Max</h4>
+                                <p class="text-[11px] text-slate-500 leading-relaxed">Generating massive volumes of soil nutrients.</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200/60 p-4 sm:p-6 rounded-2xl">
+                                <div class="text-brand font-black text-xl sm:text-2xl">GOBARdhan</div>
+                                <h4 class="text-[10px] font-bold uppercase text-slate-700 tracking-wider mt-1 mb-1">Policy</h4>
+                                <p class="text-[11px] text-slate-500 leading-relaxed">Leveraging stable central fiscal structures.</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200/60 p-4 sm:p-6 rounded-2xl">
+                                <div class="text-brand font-black text-xl sm:text-2xl">Up to 5%</div>
+                                <h4 class="text-[10px] font-bold uppercase text-slate-700 tracking-wider mt-1 mb-1">Blending</h4>
+                                <p class="text-[11px] text-slate-500 leading-relaxed">Ensuring long-term demand mandates by 2028.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-6 sm:p-10">
+                        <div class="flex flex-col sm:flex-row gap-6 items-start">
+                            <div class="shrink-0 bg-brand text-white text-xl w-10 h-10 rounded-xl flex items-center justify-center font-bold shadow-md">🌍</div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900 mb-1">Environmental Mitigation & Global Compliance</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                                    Our biological refining workflows convert unmanaged field waste and agricultural biomass into clean fuels, actively preventing the hazardous open burning of crop stubble. This slashes severe localized atmospheric pollution, minimizes smoke emissions, and captures fugitives like methane gas that escape from natural decomposition.
+                                </p>
+                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                    Our operational standards align with India's binding global commitments under the **Paris Agreement**, support the rural hygiene targets of the **Swachh Bharat Mission**, and directly advance India's definitive net-zero decarbonization target.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div id="page-technology" class="page-view">
+            <section class="py-16 bg-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <span class="text-brand font-bold text-xs uppercase tracking-wider bg-emerald-50 px-3 py-1.5 rounded-full">Next-Gen Bio-Refining</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">High-Solids Dry Digestion Technology</h2>
+                        <p class="text-slate-600 mt-3 text-sm">VSDRP Green Energy utilizes advanced **Dry Anaerobic Digestion** architecture, an industrial upgrade specifically engineered to process stackable, high-fibrous organic feedstock without massive liquid dilution.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
+                        <div class="space-y-4">
+                            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Breaking the Constraints of Traditional Wet Digestion</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Unlike older standard wet methanation setups that require diluting input material into a thin liquid slurry (under 10% solids), our **Dry Technology** processes high-density biomass containing **20% to 40% total solids (TS)**. 
+                            </p>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                This allows the plant to directly accept heavy agricultural materials like chopped Super Napier grass, straw matrices, and dense maize silages directly into the system, drastically minimizing raw water consumption and eliminating process optimization bottle-necks.
+                            </p>
+                        </div>
+                        <div class="bg-brand-dark rounded-2xl p-6 sm:p-8 text-white shadow-lg border border-emerald-800">
+                            <h4 class="text-brand-light font-bold text-xs uppercase tracking-wider mb-3">Dry Technology Structural Superiority</h4>
+                            <ul class="space-y-2 text-xs text-emerald-100">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-brand-light font-bold">✓</span>
+                                    <span><strong>90% Less Fresh Water Input:</strong> Minimizes water dilution requirements.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-brand-light font-bold">✓</span>
+                                    <span><strong>No Scum Layers:</strong> Continuous structural mechanical mixing prevents crusting.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-brand-light font-bold">✓</span>
+                                    <span><strong>Compact Footprint:</strong> Yields far higher biogas volume per cubic meter.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-brand-light font-bold">✓</span>
+                                    <span><strong>Concentrated FOM Manure:</strong> Requires zero extensive dewatering to recycle back to farms.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-900 tracking-tight text-center mb-6">Integrated 12 TPD Dry-Processing Lifecycle</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                        <div class="border border-slate-200 p-5 rounded-2xl relative bg-slate-50">
+                            <span class="absolute top-4 right-4 text-2xl font-bold text-slate-200">01</span>
+                            <h3 class="text-base font-bold text-slate-900 mb-1">High-Solids Feeding</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Harvested Super Napier grass and silages are precisely shredded and pushed via heavy-duty shaft augers directly into the digesters.</p>
+                        </div>
+                        <div class="border border-slate-200 p-5 rounded-2xl relative bg-slate-50">
+                            <span class="absolute top-4 right-4 text-2xl font-bold text-slate-200">02</span>
+                            <h3 class="text-base font-bold text-slate-900 mb-1">Dry Fermentation</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">The high-density material undergoes continuous biological transformation under thermophilic control regimes, maximizing raw carbon separation.</p>
+                        </div>
+                        <div class="border border-slate-200 p-5 rounded-2xl relative bg-slate-50">
+                            <span class="absolute top-4 right-4 text-2xl font-bold text-slate-200">03</span>
+                            <h3 class="text-base font-bold text-slate-900 mb-1">Refining Array</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">The raw gas is transferred into chemical scrubbers that strip out $CO_2$ and $H_2S$, compressing methane purity <strong>above 98%</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="page-feedstock" class="page-view">
+            <section class="py-16 bg-white">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <span class="text-brand font-bold text-xs uppercase tracking-wider bg-emerald-50 px-3 py-1.5 rounded-full">Agri-Linkages</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">Feedstock Supply Chain</h2>
+                        <p class="text-slate-600 mt-3 text-sm">Empowering agricultural communities in Karnataka through structured buyback governance and commercial crop integration.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                        <div class="p-6 border border-slate-100 rounded-2xl bg-slate-50">
+                            <h4 class="font-bold text-slate-900 text-base sm:text-lg mb-1">Targeted Energy Crops</h4>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">We focus primarily on ultra-high-yielding carbon crops like <strong>Super Napier Grass (Pakchong 1)</strong> and seasonal maize silage, which ensure reliable, year-round biogas yield metrics.</p>
+                        </div>
+                        <div class="p-6 border border-slate-100 rounded-2xl bg-slate-50">
+                            <div class="text-brand font-bold mb-1 text-base sm:text-lg">🌾 Benefits for Farmers</div>
+                            <ul class="text-xs sm:text-sm text-slate-600 space-y-1">
+                                <li>• Long-term, secure formal lease and crop purchase agreements.</li>
+                                <li>• High-quality organic Fermented Manure (FOM) supply to enrich soil.</li>
+                                <li>• Predictable cash flows protected from market price drops.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button onclick="switchPage('contact')" class="bg-brand hover:bg-brand-dark text-white font-bold px-6 py-3 rounded-lg text-xs sm:text-sm transition">Become a Feedstock Supplier</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="page-directors" class="page-view">
+            <section class="py-16 bg-slate-50">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <span class="text-brand font-bold text-xs uppercase tracking-wider bg-emerald-100/60 px-3 py-1.5 rounded-full">Corporate Governance</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">Board of Directors</h2>
+                        <p class="text-slate-600 mt-3 text-sm">Bringing together deep biotechnology expertise and decades of global project management excellence to lead the green energy sector.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
+                        
+                        <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm relative overflow-hidden flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+                            
+                            <div class="bg-slate-100 rounded-lg overflow-hidden border border-slate-300 shadow-sm flex items-center justify-center shrink-0 w-40 h-48 sm:w-32 sm:h-40">
+                                <img src="images/raveendra.jpg" alt="Mr. Raveendra Gollapudi" class="w-full h-full object-cover object-top" onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=\'text-slate-400 font-bold text-xs sm:text-sm text-center p-2\'>Mr. Raveendra<br>Gollapudi<br><span class=\'text-[10px] font-normal text-slate-300\'>Photo Missing</span></div>';">
+                            </div>
+                            
+                            <div class="flex-grow text-center sm:text-left">
+                                <h3 class="text-xl sm:text-2xl font-black text-slate-900">Mr. Raveendra Gollapudi</h3>
+                                <p class="text-xs sm:text-sm font-bold text-brand uppercase tracking-widest mt-0.5">Managing Director</p>
+                                <span class="inline-block bg-emerald-50 text-brand-dark text-[11px] font-semibold px-2.5 py-1 rounded-md mt-2 border border-emerald-100">B.E. (Biotechnology) — BITM, 2012</span>
+                                
+                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-4 pt-4 border-t border-slate-100">
+                                    Mr. Raveendra is an engineering graduate in Biotechnology from Bellari Institute of Technology and Management (2012). During his academic tenure, he spearheaded breakthrough research on optimizing 2G bio-ethanol synthesis architectures utilizing low-cost agricultural residuals like rice husk and rice straw.
+                                </p>
+                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
+                                    He brings a stellar data analytics background with nearly 11 years of corporate governance experience across premium global CRO platforms, including IQVIA (4 years), TCS (1 year), Covance (1.8 years), and PPD (4 years). He currently serves within Icon Clinical Research as Senior Statistical Programmer II. His corporate accountability encompasses end-to-end multi-project life cycles, high-tier statistical data submissions, and structural budget finalization protocols for complex pharmaceutical pipelines.
+                                </p>
+                                <p class="text-xs sm:text-sm text-emerald-800 font-medium leading-relaxed mt-3 bg-emerald-50/50 p-3 rounded-xl border border-emerald-100/60 shadow-sm">
+                                    💼 <strong>Project Mandate:</strong> Deploying comprehensive lifecycle mapping, strict milestone governance, and technical biochemical oversight to reliably scale our 12 TPD renewable asset portfolio.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm relative overflow-hidden flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+                            
+                            <div class="bg-slate-100 rounded-lg overflow-hidden border border-slate-300 shadow-sm flex items-center justify-center shrink-0 w-40 h-48 sm:w-32 sm:h-40">
+                                <img src="images/pramodha.jpg" alt="Mrs. Pramodha K" class="w-full h-full object-cover object-top" onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=\'text-slate-400 font-bold text-xs sm:text-sm text-center p-2\'>Mrs. Pramodha K<br><span class=\'text-[10px] font-normal text-slate-300\'>Photo Missing</span></div>';">
+                            </div>
+                            
+                            <div class="flex-grow text-center sm:text-left">
+                                <h3 class="text-xl sm:text-2xl font-black text-slate-900">Mrs. Pramodha K</h3>
+                                <p class="text-sm font-bold text-brand uppercase tracking-widest mt-0.5">Director</p>
+                                <span class="inline-block bg-emerald-50 text-brand-dark text-[11px] font-semibold px-2.5 py-1 rounded-md mt-2 border border-emerald-100">B.E. (Biotechnology) — BITM, 2012</span>
+                                
+                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-4 pt-4 border-t border-slate-100">
+                                    Mrs. Pramodha K is an engineering graduate in Biotechnology from Bellari Institute of Technology and Management (2012), where she co-developed advanced research models on high-efficiency 2G bio-ethanol processing from lignocellulosic biomass, including grain husks and straws.
+                                </p>
+                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-3">
+                                    She offers over 13 years of technical leadership across premier global corporate settings. Her career profile includes 8 years as a Clinical Data Management Scientist at Accenture, followed by 5 years of strategic operations management at IQVIA. She is heavily specialized in supervising cross-functional resource planning, data metrics validation, and lab data asset mapping.
+                                </p>
+                                <p class="text-xs sm:text-sm text-emerald-800 font-medium leading-relaxed mt-3 bg-emerald-50/50 p-3 rounded-xl border border-emerald-100/60 shadow-sm">
+                                    🛠️ <strong>Operations Mandate:</strong> Directs corporate internal infrastructure setups, human capital deployment, data compliance management, and quality control systems to ensure exceptional facility runtime.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="page-contact" class="page-view">
+            <section class="py-16 bg-white">
+                <div class="max-w-4xl mx-auto px-4">
+                    <div class="text-center mb-8">
+                        <span class="text-brand font-bold text-xs uppercase tracking-wider bg-emerald-50 px-3 py-1.5 rounded-full">B2B Engagement</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-3 mb-2">Initialize an Off-Take or Feedstock Partnership</h2>
+                        <p class="text-slate-600 max-w-xl mx-auto text-xs sm:text-sm">Connecting energy utility entities, commercial distributors, and large-scale agricultural networks directly with our corporate management board.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                        <div class="md:col-span-2 space-y-6">
+                            
+                            <form id="partnershipForm" class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 text-left space-y-5 shadow-sm">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Corporate Entity / Contact Name</label>
+                                        <input type="text" id="formName" placeholder="Your Name or Company" class="w-full bg-white border border-slate-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand" required>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Contact Email / Phone Number</label>
+                                        <input type="text" id="formContact" placeholder="Contact Details" class="w-full bg-white border border-slate-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand" required>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Partnership Engagement Domain</label>
+                                    <select id="formDomain" class="w-full bg-white border border-slate-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand">
+                                        <option value="Feedstock Supply">Commercial Energy Crop & Feedstock Supply (Farmers/Agri Co-ops)</option>
+                                        <option value="Bio-CNG Off-Take">Bio-CNG Commercial Off-Take / Retail Gas Distribution</option>
+                                        <option value="Manure Distribution">Fermented Organic Manure (FOM) Bulk Distribution</option>
+                                        <option value="Equipment Vendor">Technology / Equipment Vendor Partnership</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Operational Requirements / Proposal Details</label>
+                                    <textarea id="formMessage" rows="5" placeholder="Please outline your delivery capacity, off-take volumes, or general structural proposal details..." class="w-full bg-white border border-slate-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand" required></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-3.5 px-4 rounded-lg transition shadow-md tracking-wide text-xs sm:text-sm uppercase flex items-center justify-center gap-2">
+                                    <span>Submit Proposal</span>
+                                </button>
+                            </form>
+
+                            <div id="fallbackBoard" class="hidden border-2 border-amber-200 bg-amber-50/70 rounded-2xl p-5 space-y-4 shadow-sm">
+                                <div class="flex items-start gap-3">
+                                    <span class="text-xl">💡</span>
+                                    <div>
+                                        <h4 class="font-bold text-slate-900 text-sm">System Mail App Not Detected</h4>
+                                        <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">If your automated mail software failed to launch, please copy our official executive inbox address below and manually paste the pre-compiled text into your personal Gmail or webmail account.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2 items-center bg-white p-3 rounded-xl border border-slate-200">
+                                    <span class="text-xs font-mono font-bold text-slate-700 select-all flex-grow px-2 overflow-hidden text-ellipsis">balsu.vinod@gmail.com</span>
+                                    <button onclick="copyMailAddress()" id="copyBtn" class="bg-slate-800 hover:bg-slate-950 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-md transition shrink-0">Copy</button>
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">Your Compiled Proposal Text:</label>
+                                    <textarea id="fallbackText" rows="6" class="w-full bg-white border border-slate-200 rounded-xl px-3 py-2.5 font-mono text-xs text-slate-700 focus:outline-none select-all" readonly></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="bg-slate-900 text-white p-6 rounded-2xl border border-slate-800 shadow-sm">
+                                <h4 class="text-brand-light font-bold text-xs uppercase tracking-wider mb-2">Plant Registry</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    <strong>VSDRP Green Energy Bio Refineries Pvt. Ltd.</strong><br>
+                                    Village Godehalu, GP Amarapura,<br>
+                                    Block Ballari, District Ballari,<br>
+                                    State Karnataka, Pincode 583111.
+                                </p>
+                                <a href="https://maps.google.com" target="_blank" class="mt-4 w-full bg-emerald-800 hover:bg-brand text-center text-white font-bold py-2 px-3 rounded-lg text-[11px] block tracking-wide transition border border-emerald-700 uppercase">
+                                    🌐 Open In Google Maps Directions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="bg-brand-dark text-emerald-200/80 py-8 border-t border-emerald-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs space-y-2">
+            <p class="font-semibold text-emerald-400">© 2026 VSDRP GREEN ENERGY BIO REFINERIES PVT. LTD. All Rights Reserved.</p>
+            <p class="text-emerald-300/60 max-w-xl mx-auto">Registered under Ministry of Corporate Affairs, Government of India. SATAT Initiative Implementation and GOBARdhan Ecosystem Registered Partner.</p>
+        </div>
+    </footer>
+
+    <script>
+        function switchPage(pageId) {
+            // Hide all views
+            const views = document.querySelectorAll('.page-view');
+            views.forEach(view => view.classList.remove('active'));
+
+            // Show selected view
+            const targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            // Update Desktop Nav Active States
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                if (btn.id === 'nav-' + pageId) {
+                    btn.classList.add('text-brand', 'border-b-2', 'border-brand', 'font-semibold');
+                    btn.classList.remove('text-slate-600', 'hover:text-brand');
+                } else {
+                    btn.classList.remove('text-brand', 'border-b-2', 'border-brand', 'font-semibold');
+                    btn.classList.add('text-slate-600', 'hover:text-brand');
+                }
+            });
+
+            // Scroll smoothly to top on page switches
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const dropdown = document.getElementById('mobileDropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Form submission utility using system client fallback structures
+        document.getElementById('partnershipForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('formName').value;
+            const contact = document.getElementById('formContact').value;
+            const domain = document.getElementById('formDomain').value;
+            const msg = document.getElementById('formMessage').value;
+
+            const subject = encodeURIComponent(`B2B Partnership Proposal [${domain}] - ${name}`);
+            const body = `Corporate Entity / Name: ${name}\nContact Details: ${contact}\nDomain Type: ${domain}\n\nProposal Details:\n${msg}`;
+            
+            // Render text into the backup console box
+            document.getElementById('fallbackText').value = body;
+            document.getElementById('fallbackBoard').classList.remove('hidden');
+
+            // Trigger natural protocol mail application launch
+            window.location.href = `mailto:balsu.vinod@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+        });
+
+        function copyMailAddress() {
+            const btn = document.getElementById('copyBtn');
+            navigator.clipboard.writeText('balsu.vinod@gmail.com');
+            btn.innerText = 'Copied!';
+            setTimeout(() => { btn.innerText = 'Copy'; }, 2000);
+        }
+    </script>
+</body>
+</html>
